@@ -1,5 +1,5 @@
-# Copyright (C) 2018-2020 The LineageOS Project
-# Copyright (C) 2018-2020 The PixelExperience Project
+# Copyright (C) 2018-2021 The LineageOS Project
+# Copyright (C) 2018-2021 The PixelExperience Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,6 +19,8 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/xiaomi/beryllium
 
 PRODUCT_COPY_FILES += \
+    vendor/xiaomi/beryllium/proprietary/system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml \
+    vendor/xiaomi/beryllium/proprietary/system_ext/framework/com.android.hotwordenrollment.common.util.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/com.android.hotwordenrollment.common.util.jar \
     vendor/xiaomi/beryllium/proprietary/lib/fm_helium.so:$(TARGET_COPY_OUT_SYSTEM)/lib/fm_helium.so \
     vendor/xiaomi/beryllium/proprietary/lib/libfm-hci.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libfm-hci.so \
     vendor/xiaomi/beryllium/proprietary/lib64/fm_helium.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/fm_helium.so \
@@ -345,5 +347,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.fm@1.0 \
     CACertService \
+    HotwordEnrollmentOKGoogleWCD9340 \
+    HotwordEnrollmentXGoogleWCD9340 \
     android.hardware.gnss@2.0-service-qti \
     vendor.qti.gnss@3.0-service
